@@ -321,6 +321,14 @@ Component({
       } else {
         data.nodes = nodes
       }
+      // NOTE: 修复 ios18 兼容性问题：无法跨标题和段落复制文本
+      // 分析：对比发现 ios18 同一个 rich-text 可以复制，但是如果是多个 rich-text 组成的富文本会出现上面问题（已知安卓和ios16无此问题）
+      // 解决：对块标签进行合并，即将多个 rich-text 合并到一个
+      // console.log('nodes', nodes)
+      const mergedNodes = [...nodes]
+      Parser.mergeNodes(mergedNodes)
+      // console.log('merged nodes', mergedNodes)
+      data.nodes = mergedNodes
 
       this.setData(data,
         // #ifndef MP-TOUTIAO

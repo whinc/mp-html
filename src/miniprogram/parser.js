@@ -141,6 +141,22 @@ function mergeNodes (nodes) {
   }
 }
 
+function mergeNodesV2 (nodes) {
+  let i = nodes.length - 1
+  for (let j = i; j >= -1; j--) {
+    if (j === -1 || nodes[j].c || !nodes[j].name || (!['div', 'p', 'h'].includes(nodes[i].name) ) || (nodes[j].attrs.style || '').includes('inline')) {
+      if (i - j >= 1) {
+        nodes.splice(j + 1, i - j, {
+          name: 'div',
+          attrs: {},
+          children: nodes.slice(j + 1, i + 1)
+        })
+      }
+      i = j - 1
+    }
+  }
+}
+
 /**
  * @description html 解析器
  * @param {Object} vm 组件实例
@@ -1267,3 +1283,4 @@ Lexer.prototype.endTag = function () {
 }
 
 module.exports = Parser
+module.exports.mergeNodes = mergeNodesV2

@@ -1,13 +1,14 @@
 {
-	"description": "项目配置文件",
-	"setting": {
+    "description": "项目配置文件",
+    "setting": {
+        "compileHotReLoad": true,
         "urlCheck": true,
         "es6": true,
         "postcss": true,
         "minified": true,
         "newFeature": true
     },
-	"compileType": "miniprogram",
-	"appid": "touristappid",
-	"projectname": "mp-html"
+    "compileType": "miniprogram",
+    "appid": "wxe5cdad1737aafa94",
+    "projectname": "mp-html"
 }

@@ -1,7 +1,51 @@
+module.exports.markdown = `# 如何成为一名优秀的猫主？养猫技巧全攻略
+
+照顾猫咪不仅是一项责任，更是一门艺术。以下是一些养猫的实用技巧，帮助你与小猫建立更深的连接。
+
+## 猫咪饮食
+
+确保你的猫咪饮食均衡，适合其年龄和健康状况：
+
+| 食物类型      | 建议品牌          | 注意事项                  |
+|---------------|------------------|--------------------------|
+| 干粮          | 品牌A, 品牌B     | 确保含有高蛋白质和低谷物  |
+| 湿粮          | 品牌C, 品牌D     | 适量喂食，防止肥胖       |
+| 零食          | 品牌E            | 控制分量，作为奖励使用    |
+
+## 猫咪健康
+
+定期检查猫咪的健康状况，预防胜于治疗：
+
+- **定期体检**：每年至少一次。
+- **疫苗接种**：根据兽医建议进行。
+- **口腔护理**：使用专用牙刷和牙膏。
+
+## 猫咪玩耍
+
+为猫咪提供丰富的玩具和活动空间：
+
+- **爬架**：满足猫咪攀爬的天性。
+- **互动玩具**：增强人猫互动，例如激光笔。
+- **藏匿游戏**：让猫咪在家中寻找零食，刺激智力。
+
+## 代码示例：喂食时间提醒
+
+\`\`\`python
+import time
+
+def feeding_reminder():
+    while True:
+        print("该给猫咪喂食啦！")
+        time.sleep(3600)  # 每小时提醒一次
+
+feeding_reminder()
+\`\`\`
+
+通过这些小技巧，你能更好地照顾你的猫咪，让它们在你的陪伴下健康快乐地成长。`
 /**
  * @fileoverview 用于测试的 html 内容
  */
-module.exports = `<title>富文本示例</title>
+module.exports.html = `<title>富文本示例</title>
 <div>
   <section style="text-align: center; margin: 0px auto;">
     <section style="border-radius: 4px; border: 1px solid #757576; display: inline-block; padding: 5px 20px;">
@@ -162,6 +206,11 @@ module.exports = `<title>富文本示例</title>
       &nbsp;&nbsp;<span>正常</span>
       &nbsp;&nbsp;<small>小一号</small>
     </p>
+    <h2 style="margin-top: 0.5em;">大标题</h2>
+    <h3 style="margin-top: 0.5em;">中标题</h3>
+    <h4 style="margin-top: 0.5em;">小标题</h4>
+  </section>
+  <section style="margin-top: 1.5em;">
     <h2 style="margin-top: 0.5em;">大标题</h2>
     <h3 style="margin-top: 0.5em;">中标题</h3>
     <h4 style="margin-top: 0.5em;">小标题</h4>
